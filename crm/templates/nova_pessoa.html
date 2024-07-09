@@ -1,0 +1,16 @@
+<!-- nova_pessoa.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nova Pessoa</title>
+</head>
+<body>
+    <h1>Nova Pessoa</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

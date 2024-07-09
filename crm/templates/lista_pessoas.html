@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1>Lista de Pessoas</h1>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Idade</th>
+      <th scope="col">Telefone</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for pessoa in pessoas %}
+    <tr>
+      <th scope="row">{{ pessoa.id }}</th>
+      <td>{{ pessoa.nome }}</td>
+      <td>{{ pessoa.email }}</td>
+      <td>{{ pessoa.idade }}</td>
+      <td>{{ pessoa.telefone }}</td>
+      <td><a class="btn btn-primary" href="{% url 'editar_pessoa' pessoa.id %}" >Alterar</a></td>
+      <td><a class="btn btn-danger" href="{% url 'excluir_pessoa' pessoa.id %}" >Excluir</a></td>
+    </tr>
+    {%empty%}
+  <p>Nenhuma pessoa encontrada.</p>
+  {%endfor%}
+  </tbody>
+</table>
+
+{% endblock %}
