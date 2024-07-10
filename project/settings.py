@@ -74,6 +74,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'project.wsgi.app'
 
 
+
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -85,17 +86,16 @@ WSGI_APPLICATION = 'project.wsgi.app'
 # }
 
 DATABASES = {
-    'default':{
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'projetocruddb',
-        'USER': 'projetocruddb_owner',
-        'PASSWORD': 'qu5jB4RLDmSE',
-        'HOST': 'ep-solitary-sound-a5hkhhow.us-east-2.aws.neon.tech',
+        'USER':'projetocruddb_owner',
+        'PASSWORD': 'wsTyvIgdE8q9',
+        'HOST': 'ep-calm-art-a5djbixq.us-east-2.aws.neon.tech',
         'PORT': '5432',
-        'OPTIONS': {'sslmode': 'require'},
+        'OPTIONS': {'sslmode': 'require'}
     }
 }
-
 
 
 # Password validation
