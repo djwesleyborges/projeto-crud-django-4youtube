@@ -88,12 +88,12 @@ WSGI_APPLICATION = 'project.wsgi.app'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'projetocruddb',
-        'USER':'projetocruddb_owner',
-        'PASSWORD': 'wsTyvIgdE8q9',
-        'HOST': 'ep-calm-art-a5djbixq.us-east-2.aws.neon.tech',
-        'PORT': '5432',
-        'OPTIONS': {'sslmode': 'require'}
+        'NAME': os.environ.get('NAME'),
+        'USER':os.environ.get('USER'),
+        'PASSWORD': os.environ.get('PASSWORD'),
+        'HOST': os.environ.get('HOST'),
+        'PORT': os.environ.get('PORT'),
+        'OPTIONS': {'sslmode': 'require'},
     }
 }
 
